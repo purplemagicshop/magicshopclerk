@@ -57,10 +57,10 @@ client.on('message', async msg => {
                   await page.click('#control > tbody > tr > td > table > tbody > tr > td:nth-child(2) > div > img'), // Clicking the link will indirectly cause a navigation
                 ]);
 
-                await page.waitForSelector('#term_preview > span > span');
+              //  await page.waitForSelector('#term_preview > span > span');
                 const katex = await page.$('#term_preview > span > span');              // declare a variable with an ElementHandle
                 const katexbox = await katex.boundingBox();              // this method returns an array of geometric parameters of the element in pixels.
-                await page.screenshot({'path': 'tempscreenshot/katex.png', 'clip': {'x': katexbox['x'] - 6, 'y': katexbox['y'] -6, 'width': katexbox['width'] + 12, 'height': katexbox['height'] + 12 }});     // take screenshot of the required area in puppeteer
+                await page.screenshot({'path': 'tempscreenshot/katex.png', 'clip': {'x': katexbox['x'] - 6, 'y': katexbox['y'] -4, 'width': katexbox['width'] + 8, 'height': katexbox['height'] + 12 }});     // take screenshot of the required area in puppeteer
 
                 // Create the attachment using MessageAttachment
                 const katexattachment = new Discord.MessageAttachment('./tempscreenshot/katex.png');
