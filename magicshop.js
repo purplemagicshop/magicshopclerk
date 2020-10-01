@@ -42,13 +42,13 @@ client.on('message', async msg => {
         }
 
         if(command === "datainfo") {
-            msg.channel.send("Magic Shop Data info idk whut to put here, data exports and data deletion, what we use the data for, where it is stored?")
+            msg.channel.send("Magic Shop Bots store and log messages, even after message deletion. We log all activity that passes through the Discord API. We do not and cannot store IPs, as that is literally impossible. We don't have access to emails, and other sensitive content. You may request data deletion from @kyler#9100 or a data export and your request will be taken care of within 30 days.")
           }
 
-
-          if(msg.content === "moka is cute") {
-            msg.channel.send("mhm! moka is cute uwu!")
-          }
+        if (command === "discordrules") {
+        msg.channel.send("We follow discord guidelines strictly and report back to Trust & Safety.\n" + 
+"Terms: https://discord.com/terms \n Privacy: https://discord.com/privacy \n Guidelines: https://discord.com/guidelines" )
+}
 
     }}
 });
