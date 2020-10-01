@@ -20,7 +20,7 @@ client.on('ready', () => {
   .catch(console.error);
 });
 
-bot.on('guildMemberAdd', async guildMember +> {
+bot.on('guildMemberAdd', async guildMember => {
     const autoRoleArray = ["748660895647006731","761069908326219816","748660462974926969","748558617082331237","748660893012983848"]
     autoRoleArray.forEach(function(autoRole) {
     console.log(autoRole);
